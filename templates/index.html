@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<form action="/contacts" method="get" class="tool-bar">
+    <label for="search">Search Term</label>
+    <input id="search" type="search" name="q"
+        value="{{ name }}" 
+        hx-get="/contacts"
+        hx-trigger="search, keyup delay:200ms changed"
+        hx-target="tbody"
+        hx-select="tbody tr"
+        hx-push-url="true"
+        hx-indicator="#spinner"
+    />
+    <img id="spinner" class="htmx-indicator" src="/img/spinning-circles.svg" alt="Request In Flight..."/>
+    <input class="button" type="submit" value="Search" />
+</form>
+<br />
+<a href="/contacts">Clear</a>
+<hr />
+<p>
+    <a href="/contacts/new">Add Contact</a>
+</p>
+<br><br>
+<div>
+    <!-- <span style="float: right"> -->
+    <!--     {% if page > 1 %} -->
+    <!--         <a href="/contacts?page={{ page - 1 }}">Previous</a> -->
+    <!--     {% endif %} -->
+    <!--     {% if contacts|length == 10 %} -->
+    <!--         <a href="/contacts?page={{ page + 1 }}">Next</a> -->
+    <!--     {% endif %} -->
+    <!-- </span> -->
+</div>
+<br><br>
+<table>
+    <thead>
+        <tr>
+            <th>First</th> <th>Last</th> <th>Phone</th> <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% include "rows.html" %}
+    {% if contacts|length == 10 %}
+        <tr>
+            <td colspan="5" style="text-align: center">
+                <span 
+                    hx-target="closest tr"
+                    hx-trigger="revealed"
+                    hx-swap="outerHTML"
+                    hx-select="tbody > tr"
+                    hx-get="/contacts?page={{ page + 1 }}">
+                   Loading more... 
+                </span>
+                <!-- <button  -->
+                <!--     hx-target="closest tr" -->
+                <!--     hx-swap="outerHTML" -->
+                <!--     hx-select="tbody > tr" -->
+                <!--     hx-get="/contacts?page={{ page + 1 }}"> -->
+                <!--    Load More  -->
+                <!-- </button> -->
+            </td>
+        </tr>
+    {% endif %}
+    </tbody>
+</table>
+
+
+{% endblock %}

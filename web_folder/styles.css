@@ -1,0 +1,107 @@
+@import "catppuccin.css";
+
+
+body {
+    background: var(--ctp-macchiato-base);
+    font-family: Cantarell;
+}
+h1{
+    margin: 40px auto;
+    color: var(--ctp-macchiato-maroon);
+    text-align: center;
+    font-family: Cantarell;
+}
+
+hr {
+    border: 1px solid var(--ctp-macchiato-maroon);
+    font-family: Cantarell;
+}
+
+div {
+    color: var(--ctp-macchiato-text);
+    font-family: Cantarell;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+table, th, td {
+    font-family: Cantarell;
+    padding: 6px;
+    border: 1px solid var(--ctp-macchiato-maroon);
+    border-radius: 5px;
+    border-collapse: collapse;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+button {
+    font-family: Cantarell;
+    padding: 6px;
+    border: 1px solid var(--ctp-macchiato-maroon);
+    border-radius: 5px;
+    background: var(--ctp-macchiato-peach);
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--ctp-macchiato-crust);
+}
+
+button .delete {
+    background: var(--ctp-macchiato-red);
+    color: var(--ctp-macchiato-text);
+}
+
+input, select{
+    padding: 6px;
+    border: 1px solid var(--ctp-macchiato-maroon);
+    border-radius: 5px;
+    background: var(--ctp-macchiato-surface0);
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--ctp-macchiato-text)
+}
+
+fieldset {
+    border: 1px solid var(--ctp-macchiato-maroon);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--ctp-macchiato-text);
+    font-family: Cantarell;
+}
+
+form {
+    font-family: Cantarell;
+    margin: 6px;
+}
+
+.button {
+    margin: 6px;
+    border: 1px solid var(--ctp-macchiato-maroon);
+    border-radius: 5px;
+    background: var(--ctp-macchiato-peach);
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--ctp-macchiato-crust);
+    outline-style: none;
+}
+
+a {
+    padding: 3px;;
+    margin: 9px;
+    border: 1px solid var(--ctp-macchiato-maroon);
+    border-radius: 5px;
+    background: var(--ctp-macchiato-peach);
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--ctp-macchiato-crust);
+    outline-style: none;
+}
+
+.error {
+    color: var(--ctp-macchiato-red);
+}
+
+
+a:visited {
+    outline-style: none;
+}

@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<form action="/contacts/{{contact.id}}/edit" method="post">
+    <fieldset>
+        <legend>Contact Values</legend>
+        <p>
+            <label for="email">Email</label>
+            <input name="email" id="email" type="text" placeholder="Email" value="{{ contact.email }}" />
+            <span class="error">{{ email_error }}</span>
+        </p>
+
+        <p>
+            <label for="first_name">First Name</label>
+            <input name="first_name" id="first_name" type="text" placeholder="First Name" value="{{ contact.first_name }}" />
+            <span class="error">{{ first_name_error }}</span>
+        </p>
+
+        <p>
+            <label for="last_name">Last Name</label>
+            <input name="last_name" id="last_name" type="text" placeholder="Last Name" value="{{ contact.last_name }}" />
+            <span class="error">{{ last_name_error }}</span>
+        </p>
+
+        <p>
+            <label for="phone">Phone</label>
+            <input name="phone" id="phone" type="text" placeholder="123456789" value="{{ contact.phone }}" />
+            <span class="error">{{ phone_error }}</span>
+        </p>
+
+        <button class="button">Save</button>
+    </fieldset>
+</form>
+
+<button class="#delete" 
+    hx-delete="/contacts/{{contact.id}}"
+    hx-push-url="true"
+    hx-confirm="Are you sure you want to delete {{contact.first_name}} {{contact.last_name}}?"
+    hx-target="body">
+    Delete Contact
+</button>
+<p>
+    <a href="/contacts/{{contact.id}}">Back</a>
+</p>
+
+{% endblock %}
