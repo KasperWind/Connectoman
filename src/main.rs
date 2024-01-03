@@ -30,7 +30,7 @@ async fn main() -> Result<()> {
 
     info!("{:<12} loaded templates {}", "TEMPLATE", templates.len());
     for template in templates {
-        info!("{:<20} {template}", "TEMPLATE");
+        info!("{:<16} {template}", "TEMPLATE");
     }
 
     let tera = Arc::new(Mutex::new(t));
