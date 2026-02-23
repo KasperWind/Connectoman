@@ -1,24 +1,23 @@
-@import "catppuccin.css";
-
+@import "color.css";
 
 body {
-    background: var(--ctp-macchiato-base);
+    background: var(--color-bg-primary);
     font-family: Cantarell;
 }
 h1{
     margin: 40px auto;
-    color: var(--ctp-macchiato-maroon);
+    color: var(--color-fg-primary);
     text-align: center;
     font-family: Cantarell;
 }
 
 hr {
-    border: 1px solid var(--ctp-macchiato-maroon);
+    border: 1px solid var(--color-fg-primary);
     font-family: Cantarell;
 }
 
 div {
-    color: var(--ctp-macchiato-text);
+    color: var(--color-fg-primary);
     font-family: Cantarell;
     font-weight: bold;
     font-size: 1.2em;
@@ -27,7 +26,7 @@ div {
 table, th, td {
     font-family: Cantarell;
     padding: 6px;
-    border: 1px solid var(--ctp-macchiato-maroon);
+    border: 1px solid var(--color-fg-primary);
     border-radius: 5px;
     border-collapse: collapse;
     font-weight: bold;
@@ -37,35 +36,35 @@ table, th, td {
 button {
     font-family: Cantarell;
     padding: 6px;
-    border: 1px solid var(--ctp-macchiato-maroon);
+    border: 1px solid var(--color-fg-primary);
     border-radius: 5px;
-    background: var(--ctp-macchiato-peach);
+    background: var(--color-brown);
     font-weight: bold;
     font-size: 1.2em;
-    color: var(--ctp-macchiato-crust);
+    color: var(--color-fg-primary);
 }
 
 button .delete {
-    background: var(--ctp-macchiato-red);
-    color: var(--ctp-macchiato-text);
+    background: var(--color-red);
+    color: var(--color-fg-primary);
 }
 
 input, select{
     padding: 6px;
-    border: 1px solid var(--ctp-macchiato-maroon);
+    border: 1px solid var(--color-fg-primary);
     border-radius: 5px;
-    background: var(--ctp-macchiato-surface0);
+    background: var(--color-bg-elevated);
     font-weight: bold;
     font-size: 1.2em;
-    color: var(--ctp-macchiato-text)
+    color: var(--color-fg-primary)
 }
 
 fieldset {
-    border: 1px solid var(--ctp-macchiato-maroon);
+    border: 1px solid var(--color-fg-primary);
     border-radius: 5px;
     font-weight: bold;
     font-size: 1.2em;
-    color: var(--ctp-macchiato-text);
+    color: var(--color-fg-primary);
     font-family: Cantarell;
 }
 
@@ -76,29 +75,29 @@ form {
 
 .button {
     margin: 6px;
-    border: 1px solid var(--ctp-macchiato-maroon);
+    border: 1px solid var(--color-fg-primary);
     border-radius: 5px;
-    background: var(--ctp-macchiato-peach);
+    background: var(--color-bg-elevated);
     font-weight: bold;
     font-size: 1.2em;
-    color: var(--ctp-macchiato-crust);
+    color: var(--color-fg-primary);
     outline-style: none;
 }
 
 a {
     padding: 3px;;
     margin: 9px;
-    border: 1px solid var(--ctp-macchiato-maroon);
+    border: 1px solid var(--color-fg-primary);
     border-radius: 5px;
-    background: var(--ctp-macchiato-peach);
+    background: var(--color-bg-elevated);
     font-weight: bold;
     font-size: 1.2em;
-    color: var(--ctp-macchiato-crust);
+    color: var(--color-fg-primary);
     outline-style: none;
 }
 
 .error {
-    color: var(--ctp-macchiato-red);
+    color: var(--color-error);
 }
 
 
